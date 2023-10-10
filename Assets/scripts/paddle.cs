@@ -5,9 +5,15 @@ using UnityEngine;
 
 public class paddle : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 7f;
     public string leftOrRight;
     public float maxValue = 3.8f;
+    public float xSpeed;
+    public float ySpeed;
+
+
+
+
 
     void PaddleControl(KeyCode up, KeyCode down )
     {
@@ -34,6 +40,7 @@ public class paddle : MonoBehaviour
         } else if(leftOrRight == "right") 
         {
             PaddleControl(KeyCode.UpArrow, KeyCode.DownArrow);
-        }       
-    } 
+        }  
+
+    }
 }

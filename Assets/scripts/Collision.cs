@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 public class Collision : MonoBehaviour
 {
@@ -36,6 +37,17 @@ public class Collision : MonoBehaviour
             Debug.Log("my butt or my crotch");
             xSpeed = xSpeed * -1f;
         }
-        
+        Debug.Log("Ha");
+        if (collision.gameObject.CompareTag("LeftPaddle"))
+        {
+            Debug.Log("LP");
+            ySpeed = ySpeed * 1f;
+            xSpeed = xSpeed * -1f;
+        }
+        else if (collision.gameObject.CompareTag("RightPaddle"))
+        {
+            Debug.Log("RP");
+            xSpeed = xSpeed * -1f;
+        }
     }
 }
