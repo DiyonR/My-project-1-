@@ -8,8 +8,8 @@ public class ball : MonoBehaviour
 {
     public float xPosition = 0f;
     public float yPosition = 0f;
-    public float xSpeed = 7f;
-    public float ySpeed = 7f;
+    public float xSpeed = 12f;
+    public float ySpeed = 12f;
 
 
     public TMP_Text scoretext;
