@@ -14,6 +14,7 @@ public class Collision : MonoBehaviour
     public TMP_Text scoreText;
     public int leftScore = 0;
     public int rightScore = 0;
+    public int winScore = 25;
 
     void resetball()
     {
@@ -35,7 +36,20 @@ public class Collision : MonoBehaviour
         xPosition = xPosition + xSpeed * Time.deltaTime;
         yPosition = yPosition + ySpeed * Time.deltaTime;
         transform.position = new Vector3(xPosition, yPosition, 0f);
+        if (leftScore >= winScore)
+        {
+            scoreText.text = "Left Player Has Won";
+            xPosition = 0f;
+            yPosition = 0f;
+        }
+        else if (rightScore >= winScore) 
+        {
+            scoreText.text = "Right Player Has Won";
+            xPosition = 0f;
+            yPosition = 0f;
+        }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Auw!");

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class paddle : MonoBehaviour
 {
-    public float speed = 50f;
+    public float speed = 9f;
     public string leftOrRight;
     public float maxValue = 3.8f;
     public float xSpeed;
@@ -15,7 +15,7 @@ public class paddle : MonoBehaviour
 
 
 
-    void PaddleControl(KeyCode up, KeyCode down )
+    void PaddleControl(KeyCode up, KeyCode down, KeyCode left, KeyCode right)
     {
         if (Input.GetKey(up) && transform.position.y < maxValue)
         {
@@ -26,6 +26,15 @@ public class paddle : MonoBehaviour
         {
             transform.Translate(Vector3.down * speed * Time.deltaTime);
         }
+        else if (Input.GetKey(left) && transform.position.y > -maxValue)
+        {
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
+        }
+        else if (Input.GetKey(right) && transform.position.y > -maxValue)
+        {
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
+        }
+
 
     }
    
@@ -35,12 +44,12 @@ public class paddle : MonoBehaviour
     {   
         if(leftOrRight == "left")
         {
-            PaddleControl(KeyCode.W, KeyCode.S);
+            PaddleControl(KeyCode.W, KeyCode.S, KeyCode.A, KeyCode.D);
             
         } else if(leftOrRight == "right") 
         {
-            PaddleControl(KeyCode.UpArrow, KeyCode.DownArrow);
-        }  
+            PaddleControl(KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow);
+        } 
 
     }
 }
