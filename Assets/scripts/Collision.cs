@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.Rendering.VirtualTexturing.Debugging;
+using TMPro;
 
 public class Collision : MonoBehaviour
 {
     public float xPosition = -2f;
     public float yPosition = -2f;
-    public float xSpeed = 1f;
-    public float ySpeed = 1f;
+    public float xSpeed = 2f;
+    public float ySpeed = 2f;
+    public TMP_Text scoreText;
+    public int leftScore = 0;
+    public int rightScore = 0;
+
+    void resetball()
+    {
+        xPosition = 0f;
+        yPosition = 0f;
+        xSpeed = xSpeed * -1f;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -32,10 +43,21 @@ public class Collision : MonoBehaviour
         {
             Debug.Log("my head or my feet");
             ySpeed = ySpeed * -1f;
-        }else if (collision.gameObject.CompareTag("VerticleWall"))
+        }else if (collision.gameObject.CompareTag("verticalLeft"))
         {
             Debug.Log("my butt or my crotch");
-            xSpeed = xSpeed * -1f;
+            
+            resetball();
+            rightScore++;
+            scoreText.text = leftScore + " - " + rightScore;
+        }
+        else if (collision.gameObject.CompareTag("verticalRight"))
+        {
+            Debug.Log("my butt or my crotch");
+
+            resetball();
+            leftScore++;
+            scoreText.text = leftScore + " - " + rightScore;
         }
         Debug.Log("Ha");
         if (collision.gameObject.CompareTag("LeftPaddle"))
