@@ -14,7 +14,7 @@ public class Collision : MonoBehaviour
     public TMP_Text scoreText;
     public int leftScore = 0;
     public int rightScore = 0;
-    public int winScore = 25;
+    public int winScore = 15;
 
     void resetball()
     {
