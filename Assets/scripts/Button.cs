@@ -7,6 +7,6 @@ public class Button : MonoBehaviour
 {
     public void loadOnePlayer()
     {
-        SceneManager.LoadScene("Score");
+        SceneManager.LoadScene("score");
     }
 }
