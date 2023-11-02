@@ -9,4 +9,12 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene("score");
     }
+    public void vBot()
+    {
+        SceneManager.LoadScene("oneplayer");
+    }
+    public void cancel()
+    {
+        SceneManager.LoadScene("paddle");
+    }
 }

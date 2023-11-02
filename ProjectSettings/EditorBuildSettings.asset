@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/score.unity
     guid: cd3a8fcca392be74e8365e3da4eebc92
+  - enabled: 1
+    path: Assets/Scenes/paddle.unity
+    guid: 0f0dfd5caa10bed4b931b63f67f98b0c
+  - enabled: 1
+    path: Assets/Scenes/oneplayer.unity
+    guid: 63217b8679607a44e9be66dd71f0594b
   m_configObjects: {}
