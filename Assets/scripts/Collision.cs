@@ -4,7 +4,9 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 using TMPro;
-
+/// <summary>
+/// this code below shows the code of the score and direction if the ball collides
+/// </summary>
 public class Collision : MonoBehaviour
 {
     public float xPosition = -2f;
@@ -14,8 +16,11 @@ public class Collision : MonoBehaviour
     public TMP_Text scoreText;
     public int leftScore = 0;
     public int rightScore = 0;
-    public int winScore = 15;
+    public int winScore = 1;
 
+    /// <summary>
+    /// resetball: resets the ball position 
+    /// </summary>
     void resetball()
     {
         xPosition = 0f;
@@ -30,6 +35,9 @@ public class Collision : MonoBehaviour
     }
 
     // Update is called once per frame
+    /// <summary>
+    /// here below is the code of the win text 
+    /// </summary>
     void Update()
     {
 
@@ -49,6 +57,9 @@ public class Collision : MonoBehaviour
             yPosition = 0f;
         }
     }
+    /// <summary>
+    /// here below is the code of the walls and paddles so the ball can bounce off
+    /// </summary>
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// here is the paddle speed and keybinds of the paddle and what they do
+/// </summary>
 public class paddle : MonoBehaviour
 {
     public float speed = 9f;
@@ -37,7 +40,9 @@ public class paddle : MonoBehaviour
 
 
     }
-   
+   /// <summary>
+   /// here all the keybinds that i used for the paddles
+   /// </summary>
 
     // Update is called once per frame
     void Update()

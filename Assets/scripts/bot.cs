@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+/// <summary>
+/// here i made the automated version of pong
+/// </summary>
 public class bot : MonoBehaviour
 {
     public float yPosition = 0f;
@@ -27,7 +29,9 @@ public class bot : MonoBehaviour
 
 
     }
-
+    /// <summary>
+    /// here is coded that if he hit the horizontal wall he will go back down or up 
+    /// </summary>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Auw!");

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using TMPro;
-
+/// <summary>
+/// this is how the ball is going to move if it is reset and how fast the ball goes
+/// </summary>
 public class ball : MonoBehaviour
 {
     public float xPosition = 0f;

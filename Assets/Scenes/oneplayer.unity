@@ -150,14 +150,14 @@ RectTransform:
   m_GameObject: {fileID: 8953088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.25, y: 3.7478, z: 1}
+  m_LocalScale: {x: 2.0719726, y: 2.6705325, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1088303351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: 97}
+  m_AnchoredPosition: {x: 153, y: 118}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8953090
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   scoreText: {fileID: 8953090}
   leftScore: 0
   rightScore: 0
-  winScore: 15
+  winScore: 1
 --- !u!50 &1367423813
 Rigidbody2D:
   serializedVersion: 4
